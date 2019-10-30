@@ -1,0 +1,36 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+body{
+  width: 80%;
+  margin: 0 auto; 
+}
+
+h1{
+  margin: 20px auto; 
+}
+
+.boxes{
+  height: 75px;
+  width: 75px; 
+  display: inline-block;
+  font-size: 0;
+  border: 1px solid black;
+}
+
+.container{
+  display: inline-block;
+  font-size: 0;
+
+}
+
+.bg-warning{
+  background-color: #FF0000;
+}
+
+.bg-dark{
+  background-color: #343A40;
+}
