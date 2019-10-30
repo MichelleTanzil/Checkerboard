@@ -12,16 +12,22 @@
 <body>
   <h1>Welcome to the checkerboard!</h1>
   <div class="container" style="width: {{width}}; height: {{height}}">
-    {% for j in range(timesY): %}
-      {%if j % 2 == 0 %}
-        {% for i in range((timesX/2) | int): %}
-        <div class="boxes bg-warning" style="background-color: {{color1}}"></div>
-        <div class="boxes bg-dark style=" style="background-color: {{color2}}"></div>
+    {% for y in range(timesY): %}
+      {%if y % 2 == 0 %}
+        {% for x in range(timesX): %}
+          {% if x % 2 == 0%}
+          <div class="boxes" style="background-color: {{color1}}"></div>
+          {% else %}
+          <div class="boxes" style="background-color: {{color2}}"></div>
+          {%endif%}
         {%endfor%}
       {%else%}
-        {% for i in range((timesX/2) | int): %}
-        <div class="boxes bg-dark" style="background-color: {{color2}}"></div>
-        <div class="boxes bg-warning" style="background-color: {{color1}}"></div>
+        {% for x in range(timesX): %}
+          {% if x % 2 == 0%}
+          <div class="boxes" style="background-color: {{color2}}"></div>
+          {% else %}
+          <div class="boxes" style="background-color: {{color1}}"></div>
+        {%endif%}
         {%endfor%}
       {%endif%}
     {%endfor%}
